@@ -1,4 +1,5 @@
 import React from 'react';
+import Profile from './Profile';
 
 
 export default function Card() {
@@ -14,7 +15,7 @@ export default function Card() {
                     <table className='w-full'>
 
                         {/* headings of the table */}
-                        <thead className="bg-gray-300 rounded-sm">
+                        <thead className="bg-gray-300">
                             <tr className="text-left py-5 h-14 text-white font-medium text-sm">
                                 <th className=''>PATIENTS</th>
                                 <th className=''>DATE</th>
@@ -28,7 +29,9 @@ export default function Card() {
                         {/* body and the content of the table */}
                         <tbody>
                             <tr className="border-b">
-                                <td className="p-3">John Doe</td>
+                                <td className="p-3">
+                                    <Profile imgValue={1} fullName={"hritik kumar"} mobileNumber={'9876543210'} />
+                                </td>
                                 <td className="p-3">2024-03-02</td>
                                 <td className="p-3">10:00 AM</td>
                                 <td className="p-3">Dr. Smith</td>

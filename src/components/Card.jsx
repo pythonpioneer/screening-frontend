@@ -1,5 +1,5 @@
 import React from 'react';
-import Profile from './Profile';
+import TableBody from './TableBody';
 
 
 export default function Card() {
@@ -8,7 +8,7 @@ export default function Card() {
             <div className="w-[90%] p-5 border-2 border-gray-300 rounded-3xl mx-auto my-4">
 
                 {/* table description */}
-                <h2 className='mr-auto text-gray-500 font-bold'>Today's Appointment List</h2>
+                <h2 className='mr-auto text-gray-500 font-bold mb-2'>Today's Appointment List</h2>
 
                 <div className='rounded-xl table-enclosing'>
                     {/* creating table */}
@@ -27,20 +27,7 @@ export default function Card() {
                         </thead>
 
                         {/* body and the content of the table */}
-                        <tbody>
-                            <tr className="border-b">
-                                <td className="p-3">
-                                    <Profile imgValue={1} fullName={"hritik kumar"} mobileNumber={'9876543210'} />
-                                </td>
-                                <td className="p-3">2024-03-02</td>
-                                <td className="p-3">10:00 AM</td>
-                                <td className="p-3">Dr. Smith</td>
-                                <td className="p-3">Fracture</td>
-                                <td className="p-3">
-                                    <button className="bg-red-500 text-white p-2 ml-2 rounded-md">Delete</button>
-                                </td>
-                            </tr>
-                        </tbody>
+                        <TableBody />
                     </table>
                 </div>
 

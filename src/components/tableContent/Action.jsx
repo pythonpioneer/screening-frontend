@@ -5,7 +5,7 @@ import React from 'react';
 export default function Action() {
     return (
         <>
-            <i class="fa-solid fa-ellipsis-vertical"></i>
+            <i className="fa-solid fa-ellipsis-vertical"></i>
         </>
     )
 }

@@ -5,7 +5,7 @@ import React from 'react';
 export default function Doctor({ name }) {
     return (
         <div className='flex items-center space-x-1'>
-            <i class="fa-solid fa-user-doctor"></i>
+            <i className="fa-solid fa-user-doctor"></i>
             <span>{name}</span>
         </div>
     )

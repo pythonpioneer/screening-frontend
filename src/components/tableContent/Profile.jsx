@@ -4,7 +4,7 @@ import React from 'react';
 // the component will display the user profile and include { profileImage, fullName, mobileNumber }
 export default function Profile({ imgValue, fullName, mobileNumber }) {
 
-    const img = require(`../assets/images/${imgValue}.png`);
+    const img = require(`../../assets/images/${imgValue}.png`);
     return (
         <>
             <div className='flex'>

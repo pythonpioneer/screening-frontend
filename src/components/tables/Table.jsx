@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { fetchPatientData } from '../../services';
 import { formatDate } from '../../utils';
+import LoadingPatientData from './Loader';
 import TableBody from './TableBody';
 import TableHead from './TableHead';
 
-
+/**
+ * The component is responsible to fetch the data, display the loader and table 
+ * @returns - A JSX element shows Table.
+ */
 export default function Table() {
 
+    // state variable to manage the data 
     const [patientData, setPatientData] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     // fethcing patient data
     const fetchData = async () => {
         let result = await fetchPatientData();
+        setLoading(false);
         setPatientData(result);
     }
 
@@ -46,6 +53,10 @@ export default function Table() {
                             imgValue={idx}
                         />
                     })}
+
+                    {loading && Array(6).fill(0).map(() => 
+                        <LoadingPatientData />
+                    )}
                 </table>
             </div>
         </>

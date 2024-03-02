@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from './tables/Table';;
 
-
+// the component will display the card for the table
 export default function Card() {
     return (
         <>

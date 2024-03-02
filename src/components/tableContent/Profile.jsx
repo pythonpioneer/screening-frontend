@@ -1,7 +1,12 @@
 import React from 'react';
 
-
-// the component will display the user profile and include { profileImage, fullName, mobileNumber }
+/**
+ * The component will display the user profile and include { profileImage, fullName, mobileNumber }
+ * @param {Number} imgValue - The variable will fetch and display the image.
+ * @param {String} fullName - The variable will display the full name of the patient.
+ * @param {String} mobileNumber - The variable will display the mobile number of the patient.
+ * @returns - A JSX element.
+ */
 export default function Profile({ imgValue, fullName, mobileNumber }) {
 
     const img = require(`../../assets/images/${imgValue}.png`);

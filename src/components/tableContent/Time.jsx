@@ -1,6 +1,10 @@
 import React from 'react';
 
-
+/**
+ * The component will dispaly the appointment time.
+ * @param {String} date - The varible will display the date. 
+ * @returns - A JSX element.
+ */
 export default function Time({ time }) {
 	return (
 		<>

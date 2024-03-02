@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { fetchPatientData } from '../../services';
 import TableBody from './TableBody';
 import TableHead from './TableHead';
 
 
 export default function Table() {
+
+    const [patientData, setPatientData] = useState([]);
+
+    // fethcing patient data
+    const fetchData = async () => {
+        let result = await fetchPatientData();
+        setPatientData(result);
+    }
+
+    // fetch teh patient data after page mounting
+    useEffect(() => {
+        fetchData();
+    }, []);
+
     return (
         <>
             {/* table description */}
@@ -18,7 +33,18 @@ export default function Table() {
                     <TableHead />
 
                     {/* body and the content of the table */}
-                    <TableBody />
+                    {patientData.length > 0 && patientData.map((data, idx) => {
+                        return <TableBody 
+                            key={idx}
+                            patientName={data?.patient_name || "No Name"}
+                            mobileNumber={data?.mobile_number || "No contact"}
+                            date={data?.appointment_date || "No Appointment"}
+                            time={data?.appointment_time || "No Data"}
+                            doctorName={data?.doctor || "No Data"}
+                            injury={data?.injury || "No Data"}
+                            imgValue={idx}
+                        />
+                    })}
                 </table>
             </div>
         </>

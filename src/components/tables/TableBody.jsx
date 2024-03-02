@@ -12,19 +12,19 @@ export default function TableBody({ patientName, imgValue, mobileNumber, date, t
             <tbody className='text-left'>
                 <tr className="border-b">
                     <td className="p-2" style={{ minWidth: '166px' }}>
-                        <Profile imgValue={1} fullName={"hritik kumar"} mobileNumber={'9876543210'} />
+                        <Profile imgValue={imgValue} fullName={patientName} mobileNumber={mobileNumber} />
                     </td>
-                    <td className="" style={{ minWidth: '100px' }}>
-                        <Dates date={'12-12-12'} />
+                    <td style={{ minWidth: '100px' }}>
+                        <Dates date={date} />
                     </td>
-                    <td className="" style={{ minWidth: '100px' }}>
-                        <Time time={'10:00 AM'} />
+                    <td style={{ minWidth: '100px' }}>
+                        <Time time={time} />
                     </td>
-                    <td className="" style={{ minWidth: '150px' }}>
-                        <Doctor name={"smith hoe"} />
+                    <td style={{ minWidth: '120px' }}>
+                        <Doctor name={doctorName} />
                     </td>
-                    <td className="" style={{ minWidth: '100px' }}>
-                        {'Fracture'}
+                    <td style={{ minWidth: '100px' }}>
+                        {injury}
                     </td>
                     <td className="pl-7" style={{ minWidth: '100px' }}>
                         <Action />
